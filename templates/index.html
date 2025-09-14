@@ -25,11 +25,12 @@
             <li>Ei tehtäviä</li>
         {% endfor %}
     </ul>
-
-    <h2>Lisää tehtävä</h2>
+<div class="lt">
+    <h2 class="add">Lisää tehtävä</h2>
     <form method="post" action="/add">
-        <input type="text" name="title" placeholder="Otsikko" required>
+        <input type="text" name="title" placeholder="Lisää task" required>
         <button type="submit">Lisää</button>
     </form>
+</div>
 </body>
 </html>
