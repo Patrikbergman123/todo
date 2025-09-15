@@ -10,14 +10,21 @@ h1 {
 
 }
 
-ul {
+
+.tasks {
+
+
+
+}
+
+.tasks ul {
     list-style: none;
     outline-style: outset;
     padding: 0;
 
 }
 
-li {
+.tasks li {
     background: white;
     margin: 5px 0;
     padding: 10px;
@@ -26,6 +33,17 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.tasks button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
 }
 
 .lt button {
