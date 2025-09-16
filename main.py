@@ -44,6 +44,13 @@ def root(request: Request):
 def add_task(title: str = Form(...)):
     conn = sqlite3.connect("tasks.db")
     c = conn.cursor()
+    c.execute("SELECT COUNT(*) FROM tasks")
+    count = c.fetchone()[0]
+
+    if count == 0:
+        c.execute("DELEte FROM sqlite_sequence WHERE name='tasks'")
+
+
     c.execute("INSERT INTO tasks (title, done) VALUES (?, ?)", (title, 0))
     conn.commit()
     conn.close()
