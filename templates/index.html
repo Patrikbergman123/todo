@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+<div class="otsikko">
     <h1>TODO-lista</h1>
 
     {% if error %}
         <p style="color:red">{{ error }}</p>
     {% endif %}
+</div>
 <div class="tasks">
     <ul>
         {% for task in tasks %}
@@ -27,7 +29,7 @@
     </ul>
 </div>
 <div class="lt">
-    <h2 class="add">Lisää tehtävä</h2>
+    <h2>Lisää tehtävä</h2>
     <form method="post" action="/add">
         <input type="text" name="title" placeholder="Lisää task" required>
         <button type="submit">Lisää</button>
